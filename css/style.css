@@ -10,13 +10,14 @@ h1 {
     font-weight: 400;
     font-size: 50px;
     color: cadetblue;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin: 30px;
 }
 
 p {
     font-size: 20px;
     text-align: left;
-    margin: 0 0 20px 0;
+    margin: 30px ;
     font-weight: 400;
     font-style: normal;
 }
@@ -26,7 +27,7 @@ p {
 .navegador {
     background-color: lightsalmon;
     font-family: "Kite One", sans-serif;
-    padding: 5px 30px;
+    padding:10px 10px;
 }
 
 .navegador ul {
@@ -38,13 +39,14 @@ p {
 }
 
 .navegador li {
-    margin: 0 15px;
+    margin: 15px;
     list-style: none;
 }
 
 .navegador a {
     color: black;
     text-decoration: none;
+    margin: 5px;
 }
 
 /* CONTENIDO PRINCIPAL*/
@@ -102,12 +104,14 @@ main {
 /* IMÁGENES */
 
 #logo {
-    width: 80px;
+    width: 100px;
+    border-radius: 100px;
 }
 
 #perfil {
-    width: 250px;
+    width: 400px;
     border-radius: 8px;
+    margin: 80px;
 }
 
 .imagen_1 {
@@ -118,6 +122,7 @@ main {
 .imagen_2 {
     width: 300px;
     height: 200px;
+    margin: 50px;
 }
 
 .imagen_3 {
@@ -133,16 +138,21 @@ main {
 .imagen_5 {
     width: 300px;
     height: 200px;
+    padding: 50px;
 }
 
 .imagen_6 {
     width: 300px;
     height: 200px;
+    padding: 50px;
+    padding-bottom:0px;
 }
 
 .imagen_7 {
     width: 300px;
     height: 200px;
+    padding: 50px;
+    
 }
 
 .contenedor-flex {
@@ -182,8 +192,8 @@ main {
 
 .Footer {
     text-align: center;
-    margin: 10px 20px;
-    padding: 10px 15px;
+    margin: 0px 0px;
+    padding: 20px 20px;
     width: 100%;
     background-color: rgb(221, 210, 210);
 }
@@ -232,20 +242,25 @@ main {
 /* Columna izquierda: texto + íconos */
 .info-contacto {
     flex: 1;
-    min-width: 300px;
+    min-width: 400px;
     max-width: 600px;
     padding: 20px;
 }
 
 .info-contacto h1 {
-    font-size: 24px;
-    color: black;
-    margin-bottom: 10px;
+    font-family: "Artifika", serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: cadetblue;
+    margin-bottom: 20px;
 }
 
 .info-contacto p {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: left;
+    margin: 0 0 20px 0;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Íconos de contacto */
@@ -278,6 +293,7 @@ main {
     min-width: 300px;
     max-width: 500px;
     padding: 20px;
+    margin-left: 700px;
 }
 
 .formulario-contacto h2 {
@@ -288,6 +304,11 @@ main {
 .formulario-contacto form {
     display: flex;
     flex-direction: column;
+}
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 100%;
 }
 
 .formulario-contacto label {
@@ -325,3 +346,136 @@ main {
 .formulario-contacto button:hover {
     background-color: coral;
 }
+main {
+    background-color: rgb(228, 231, 213);
+    padding: 20px;
+}
+
+.Preguntas-Frecuentes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.pregunta {
+    display: flex;
+    flex-direction: column;
+}
+
+.pregunta.derecha  {
+    align-items: flex-end;
+}
+
+
+.pregunta.izquierda {
+    align-items: flex-start;
+}
+
+.pregunta p {
+    font-size: 20px;
+    color: #333;
+    text-align: left;
+}
+
+.pregunta strong {
+    font-weight: bold;
+}
+
+.primeras.promos {
+    margin-left: 50%;
+}
+.super.promos {
+    text-align: center;
+}
+
+/*burbujas de texto*/
+
+.Preguntas-Frecuentes {
+    text-align: center;
+}
+
+.pregunta {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pregunta p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.pregunta strong {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.pregunta.derecha {
+    background-color: #b2bdb2;
+    color: rgb(10, 10, 10);
+    text-align: right;
+    border-top-right-radius: 0;
+    position: relative;
+}
+
+.pregunta.derecha::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    border: 10px solid transparent;
+    border-top-color: #c8cfc8;
+    border-bottom: 0;
+}
+
+.pregunta.izquierda {
+    background-color: #cdd2d6;
+    color: rgb(8, 8, 8);
+    text-align: left;
+    border-top-left-radius: 0;
+    position: relative;
+}
+
+.pregunta.izquierda:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    border: 10px solid transparent;
+    border-top-color: #c8d6e2;
+    border-bottom: 0;
+}
+
+i {
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
