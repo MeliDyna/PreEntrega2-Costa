@@ -360,10 +360,18 @@ main {
 .Preguntas-Frecuentes {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: stretch;
     margin: 0 auto;
-    max-width: 800px;
     text-align: center;
+}
+#titulo{
+    text-align: center;
+}
+.Preguntas-Frecuentes i{
+    align-self: flex-start;
+}
+.Preguntas-Frecuentes i.right{
+    align-self: flex-end;
 }
 
 .pregunta {
