@@ -1,498 +1,483 @@
 body {
-    font-family: "Kite One", sans-serif;
-    background-color: rgb(228, 231, 213);
-    margin: 0;
-    padding: 0;
+  font-family: "Kite One", sans-serif;
+  background-color: rgb(228, 231, 213);
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    font-family: "Artifika", serif;
-    font-weight: 400;
-    font-size: 50px;
-    color: cadetblue;
-    margin-bottom: 30px;
-    margin: 30px;
+  font-family: "Artifika", serif;
+  font-weight: 400;
+  font-size: 50px;
+  color: cadetblue;
+  margin-bottom: 30px;
+  margin: 30px;
 }
 
 p {
-    font-size: 20px;
-    text-align: left;
-    margin: 30px ;
-    font-weight: 400;
-    font-style: normal;
+  font-size: 20px;
+  text-align: left;
+  margin: 30px;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /*NAVEGADOR SUPERIOR*/
 
 .navegador {
-    background-color: lightsalmon;
-    font-family: "Kite One", sans-serif;
-    padding:10px 10px;
-    display: flex;
-    justify-content: space-between;
+  background-color: lightsalmon;
+  font-family: "Kite One", sans-serif;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
 
 }
 
 .navegador ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    align-self:stretch ;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-self: stretch;
+  align-items: center;
 }
 
 .navegador li {
-    margin: 15px;
-    list-style: none;
+  margin: 15px;
+  list-style: none;
 }
 
 .navegador a {
-    color: black;
-    text-decoration: none;
-    margin: 5px;
+  color: black;
+  text-decoration: none;
+  margin: 5px;
 }
 
 /* CONTENIDO PRINCIPAL*/
 
 main {
-    background-color: rgb(228, 231, 213);
-    padding: 20px;
+  background-color: rgb(228, 231, 213);
+  padding: 20px;
 }
 
 .contenedor {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .contenedor .texto {
-    flex: 1;
-    min-width: 300px;
+  flex: 1;
+  min-width: 300px;
 }
 
 
 .servicios {
-    text-align: center;
-    margin: 40px auto;
+  text-align: center;
+  margin: 40px auto;
 }
 
 .servicios h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .servicios ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .servicios li {
-    margin: 10px 0;
-    position: relative;
-    padding-left: 25px;
+  margin: 10px 0;
+  position: relative;
+  padding-left: 25px;
 }
 
 .servicios li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: green;
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: green;
 }
 
 /* IMÁGENES */
 
 #logo {
-    width: 100px;
-    border-radius: 100px;
+  width: 100px;
+  border-radius: 100px;
 }
 
 #perfil {
-    width: 400px;
-    border-radius: 8px;
-    margin: 80px;
+  width: 400px;
+  border-radius: 8px;
+  margin: 80px;
 }
 
 .imagen_1 {
-    width: 300px;
-    height: 200px;
+  width: 300px;
+  height: 200px;
 }
 
 .imagen_2 {
-    width: 300px;
-    height: 200px;
-    margin: 30px;
+  width: 300px;
+  height: 200px;
+  margin: 30px;
 }
 
 .imagen_3 {
-    width: 500px;
-    height: 200px;
+  width: 500px;
+  height: 200px;
 }
 
 .imagen_4 {
-    width: 300px;
-    height: 200px;
+  width: 300px;
+  height: 200px;
 }
 
 .imagen_5 {
-    width: 300px;
-    height: 200px;
-    padding: 50px;
+  width: 300px;
+  height: 200px;
+  padding: 50px;
 }
 
 .imagen_6 {
-    width: 300px;
-    height: 200px;
-    padding: 50px;
-    padding-bottom:0px;
+  width: 300px;
+  height: 200px;
+  padding: 50px;
+  padding-bottom: 0px;
 }
 
 .imagen_7 {
-    width: 300px;
-    height: 200px;
-    padding: 50px;
-    
+  width: 300px;
+  height: 200px;
+  padding: 50px;
+
 }
 
 .contenedor-flex {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
 
 }
 
 .texto {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
-    text-align: left;
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: left;
 }
 
 /* esta parte no me salio */
 .imagenes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 10px;
-    grid-template-areas:
-        "imagen_1  imagen_2"
-        "imagen_3  imagen_4"
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  grid-template-areas:
+    "imagen_1  imagen_2"
+    "imagen_3  imagen_4"
 }
 
 .imagenes img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 /*PIE DE PÁGINA*/
 
 .Footer {
-    text-align: center;
-    margin: 0px 0px;
-    padding: 20px 20px;
-    background-color: rgb(221, 210, 210);
+  text-align: center;
+  margin: 0px 0px;
+  padding: 20px 20px;
+  background-color: rgb(221, 210, 210);
 }
 
 .menu {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 10px 0;
-    list-style: none;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  list-style: none;
+  margin: 0;
 }
 
 .Footer a {
-    text-decoration: none;
-    color: black;
-    font-family: "Kite One", sans-serif;
+  text-decoration: none;
+  color: black;
+  font-family: "Kite One", sans-serif;
 }
 
 /*SECCIONES ESPECÍFICAS*/
 
 .indice {
-    background-color: lightsalmon;
-    width: 100%;
-    height: 30vh;
-    border: 20px solid rgb(241, 88, 33);
-    /* border corregido */
-    line-height: 100%;
+  background-color: lightsalmon;
+  width: 100%;
+  height: 30vh;
+  border: 20px solid rgb(241, 88, 33);
+  /* border corregido */
+  line-height: 100%;
 }
 
 /* CONTACTO - Estructura principal */
 .contenedor-contacto {
-    padding: 40px;
-    background-color: white;
-    border-radius: 10px;
-    margin: 40px auto;
-    max-width: 1200px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-.contenido_contacto{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+
+.contenido_contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 
 
 /* Columna izquierda: texto + íconos */
 .info-contacto {
-    flex: 1;
-    min-width: 400px;
-    max-width: 600px;
-    padding: 20px;
+  flex: 1;
+  min-width: 400px;
+  max-width: 600px;
+  padding: 20px;
 }
 
 .info-contacto h1 {
-    font-family: "Artifika", serif;
-    font-weight: 400;
-    font-size: 50px;
-    color: cadetblue;
-    margin-bottom: 20px;
+  font-family: "Artifika", serif;
+  font-weight: 400;
+  font-size: 50px;
+  color: cadetblue;
+  margin-bottom: 20px;
 }
 
 .info-contacto p {
-    font-size: 20px;
-    text-align: left;
-    margin: 0 0 20px 0;
-    font-weight: 400;
-    font-style: normal;
+  font-size: 20px;
+  text-align: left;
+  margin: 0 0 20px 0;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Íconos de contacto */
 .iconos a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: black;
-    margin-bottom: 10px;
-    font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .iconos i {
-    font-size: 20px;
-    color: black;
+  font-size: 20px;
+  color: black;
 }
 
 /* Mapa (puede ser imagen o iframe) */
 .mapa img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 /* Columna derecha: formulario */
 .formulario-contacto {
-    flex: 1;
+  flex: 1;
 }
 
 .formulario-contacto h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .formulario-contacto form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 iframe {
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
 }
 
 .formulario-contacto label {
-    margin-bottom: 5px;
-    font-weight: bold;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .formulario-contacto input,
 .formulario-contacto textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-family: "Kite One", sans-serif;
-    font-size: 14px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: "Kite One", sans-serif;
+  font-size: 14px;
 }
 
 .formulario-contacto textarea {
-    height: 150px;
-    resize: vertical;
+  height: 150px;
+  resize: vertical;
 }
 
 .formulario-contacto button {
-    align-self: flex-start;
-    background-color: lightsalmon;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+  align-self: flex-start;
+  background-color: lightsalmon;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
 .formulario-contacto button:hover {
-    background-color: coral;
+  background-color: coral;
 }
+
 main {
-    background-color: rgb(228, 231, 213);
-    padding: 20px;
+  background-color: rgb(228, 231, 213);
+  padding: 20px;
 }
 
 .Preguntas-Frecuentes {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    margin: 0 auto;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 auto;
+  text-align: center;
 }
-#titulo{
-    text-align: center;
+
+#titulo {
+  text-align: center;
 }
-.Preguntas-Frecuentes i{
-    align-self: flex-start;
+
+.Preguntas-Frecuentes i {
+  align-self: flex-start;
 }
-.Preguntas-Frecuentes i.right{
-    align-self: flex-end;
+
+.Preguntas-Frecuentes i.right {
+  align-self: flex-end;
 }
 
 .pregunta {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.pregunta.derecha  {
-    align-items: flex-end;
+.pregunta.derecha {
+  align-items: flex-end;
 }
 
 
 .pregunta.izquierda {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 .pregunta p {
-    font-size: 20px;
-    color: #333;
-    text-align: left;
+  font-size: 20px;
+  color: #333;
+  text-align: left;
 }
 
 .pregunta strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 
 .super {
-    text-align: center;
+  text-align: center;
 }
+
 .promos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /*burbujas de texto*/
 
 .Preguntas-Frecuentes {
-    text-align: center;
+  text-align: center;
 }
 
 .pregunta {
-    margin: 20px 0;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .pregunta p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.5;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .pregunta strong {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .pregunta.derecha {
-    background-color: #b2bdb2;
-    color: rgb(10, 10, 10);
-    text-align: right;
-    border-top-right-radius: 0;
-    position: relative;
+  background-color: #b2bdb2;
+  color: rgb(10, 10, 10);
+  text-align: right;
+  border-top-right-radius: 0;
+  position: relative;
 }
 
 .pregunta.derecha::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    right: 20px;
-    border: 10px solid transparent;
-    border-top-color: #c8cfc8;
-    border-bottom: 0;
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  border: 10px solid transparent;
+  border-top-color: #c8cfc8;
+  border-bottom: 0;
 }
 
 .pregunta.izquierda {
-    background-color: #cdd2d6;
-    color: rgb(8, 8, 8);
-    text-align: left;
-    border-top-left-radius: 0;
-    position: relative;
+  background-color: #cdd2d6;
+  color: rgb(8, 8, 8);
+  text-align: left;
+  border-top-left-radius: 0;
+  position: relative;
 }
 
 .pregunta.izquierda:after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 20px;
-    border: 10px solid transparent;
-    border-top-color: #c8d6e2;
-    border-bottom: 0;
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  border: 10px solid transparent;
+  border-top-color: #c8d6e2;
+  border-bottom: 0;
 }
 
 i {
-    font-size: 50px;
-    margin-top: 50px;
+  font-size: 50px;
+  margin-top: 50px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
