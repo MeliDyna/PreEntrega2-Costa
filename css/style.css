@@ -127,11 +127,11 @@ main {
 .imagen_2 {
     width: 300px;
     height: 200px;
-    margin: 50px;
+    margin: 30px;
 }
 
 .imagen_3 {
-    width: 300px;
+    width: 500px;
     height: 200px;
 }
 
@@ -162,10 +162,11 @@ main {
 
 .contenedor-flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     gap: 40px;
     flex-wrap: wrap;
+
 }
 
 .texto {
@@ -294,10 +295,6 @@ main {
 /* Columna derecha: formulario */
 .formulario-contacto {
     flex: 1;
-    min-width: 300px;
-    max-width: 500px;
-    padding: 20px;
-    margin-left: 700px;
 }
 
 .formulario-contacto h2 {
@@ -388,11 +385,14 @@ main {
     font-weight: bold;
 }
 
-.primeras.promos {
-    margin-left: 50%;
-}
-.super.promos {
+
+.super {
     text-align: center;
+}
+.promos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /*burbujas de texto*/
