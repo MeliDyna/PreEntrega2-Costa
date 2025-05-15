@@ -115,30 +115,34 @@ main {
 }
 
 #perfil {
-  width: 400px;
+  width: 300px;
   border-radius: 8px;
   margin: 80px;
 }
 
 .imagen_1 {
-  width: 300px;
-  height: 200px;
+  width: 50%;
+  max-width: 400px;
 }
 
 .imagen_2 {
-  width: 300px;
-  height: 200px;
-  margin: 30px;
+  width: 50%;
+  max-width: 300px;
 }
 
 .imagen_3 {
-  width: 500px;
-  height: 200px;
+  width: 50%;
+  max-width: 400px;
+}
+/*Imagen 4 de reflex que tenia un problema con el tamaño*/
+._imagen_3 {
+  width: 50%;
+  max-width: 250px;
 }
 
 .imagen_4 {
-  width: 300px;
-  height: 200px;
+  width: 50%;
+  max-width: 300px;
 }
 
 .imagen_5 {
@@ -177,23 +181,15 @@ main {
   text-align: left;
 }
 
-/* esta parte no me salio */
 .imagenes {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 10px;
-  grid-template-areas:
-    "imagen_1  imagen_2"
-    "imagen_3  imagen_4"
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.imagenes img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-}
 
 /*PIE DE PÁGINA*/
 
