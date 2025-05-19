@@ -1,12 +1,11 @@
 @import 'variables';
 @import 'mixin';
 
-.body {
+body {
   @include fuente-principal;
   background-color: $color-fondo;
   margin: 0;
   padding: 0;
-  width:1vw ;
 }
 
 h1 {

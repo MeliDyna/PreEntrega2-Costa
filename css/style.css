@@ -10,14 +10,13 @@
   font-size: 1.1rem;
 }
 
-.body {
+body {
   font-family: "Kite One", sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: rgb(228, 231, 213);
   margin: 0;
   padding: 0;
-  width: 1vw;
 }
 
 h1 {
