@@ -1,0 +1,71 @@
+@import 'variables';
+@import 'mixin';
+
+main {
+  padding: $padding-general;
+  background-color: $color-fondo;
+  @include fuente-principal;
+
+  .contenedor-grid {
+    @include contenedor-grid($gap: 20px, $columns: 1fr);
+
+    .texto {
+      h1 {
+        @include fuente-titulo;
+        font-size: $font-h1;
+        margin: $margin-h1 auto;
+        text-align: center;
+      }
+
+      p {
+        font-size: $font-p;
+        margin: $margin-p auto;
+        text-align: justify;
+      }
+    }
+
+    .imagenes {
+      @include contenedor-grid($columns: 1fr, $gap: 15px);
+      margin-top: $margin-img-top;
+
+      img {
+        @include imagen-p(100%);
+        @include border-radius;
+        @include box-shadow-default;
+      }
+    }
+  }
+
+  .servicios {
+    margin: $margin-contenedor;
+    text-align: center;
+
+    h2 {
+      @include fuente-titulo;
+      font-size: $font-h2;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+
+      li {
+        font-size: $font-small;
+        padding: 5px 0;
+        border-bottom: 1px solid lighten($color-texto, 60%);
+      }
+    }
+  }
+
+  .imagenes_finales {
+    @include contenedor-flex($gap: 15px, $justify: center);
+    margin-top: $margin-img-top;
+
+    img {
+      @include imagen-p($width-img-5-6-7, $height-img-5-6-7, 0);
+      @include border-radius;
+      @include box-shadow-default;
+    }
+  }
+}
