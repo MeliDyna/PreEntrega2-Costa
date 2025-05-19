@@ -39,6 +39,10 @@
 }
 
 .index__section--grid {
+  margin: 10px;
+}
+
+.index__section--grid {
   display: flex;
   flex-direction: column;
   gap: 30px;
