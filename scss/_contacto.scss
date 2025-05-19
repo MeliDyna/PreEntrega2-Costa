@@ -1,109 +1,179 @@
 @import 'variables';
-@import 'mixin';
 
-.contenedor-contacto {
+$iconos: (
+  facebook: #3b5998,
+  twitter: #1da1f2,
+  instagram: #e4405f,
+  linkedin: #0077b5,
+  email: $color-header
+);
+
+.contacto__section--grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   padding: $padding-general;
-  background-color: $color-form-bg;
-  @include border-radius();
-  margin: $margin-contenedor;
-  max-width: 1200px;
-  @include box-shadow-default;
-}
-
-.contenido_contacto {
-  @include contenedor-flex($justify: space-between, $align: flex-start);
-}
-
-.info-contacto {
-  flex: 1;
-  min-width: 400px;
-  max-width: 600px;
-  padding: $padding-general;
-
-  h1 {
-    @include fuente-titulo;
-    font-size: $font-h1;
-    margin-bottom: 20px;
-  }
-
-  p {
-    font-size: $font-p;
-    text-align: left;
-    margin: 0 0 20px 0;
-    @include fuente-principal;
-  }
-}
-
-.iconos {
-  a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: $color-texto;
-    margin-bottom: 10px;
-    font-size: $font-small;
-  }
-
-  i {
-    font-size: 20px;
-    color: $color-texto;
-  }
-}
-
-.mapa img {
-  width: 100%;
-  max-width: $width-img-5-6-7;
-  @include border-radius();
-  margin-top: $margin-img-top;
-}
-
-.formulario-contacto {
-  flex: 1;
-
-  h2 {
-    font-size: $font-p;
-    margin-bottom: 20px;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  label {
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-
-  input,
-  textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    @include border-radius($border-radius-small);
-    @include fuente-principal;
-    font-size: 14px;
-  }
-
-  textarea {
-    height: 150px;
-    resize: vertical;
-  }
-
-  button {
-    align-self: flex-start;
-    @include boton();
-  }
-}
-
-iframe {
-  @include border-radius();
-  @include box-shadow-default;
-  max-width: 100%;
-}
-
-main {
   background-color: $color-fondo;
-  padding: $padding-general;
+  font-family: $font-principal;
+  color: $color-texto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  .contacto__section--texto {
+    h1 {
+      font-family: $font-titulos;
+      font-size: $font-h1;
+      color: $color-titulo;
+      margin-bottom: $margin-h1;
+      text-align: center;
+    }
+
+    p {
+      font-size: $font-p;
+      margin-bottom: $margin-p;
+      text-align: justify;
+    }
+  }
+
+  .contacto__section--iconos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @each $name, $color in $iconos {
+      a.#{$name} {
+        background-color: $color;
+        color: white;
+
+        &:hover {
+          background-color: darken($color, 10%);
+        }
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 15px;
+      border-radius: $border-radius-small;
+      text-decoration: none;
+      font-size: $font-small;
+      box-shadow: $box-shadow;
+      transition: background-color 0.3s;
+
+      i {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .contacto__section--mapa {
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: none;
+      border-radius: $border-radius-small;
+      box-shadow: $box-shadow;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+      color: $color-texto;
+      font-size: $font-small;
+
+      &:hover {
+        color: $color-header-hover;
+      }
+
+      i {
+        font-size: 24px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .contacto__section--formulario {
+    background-color: $color-form-bg;
+    padding: $padding-general;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    h2 {
+      font-size: $font-h2;
+      font-family: $font-titulos;
+      color: $color-titulo;
+      margin-bottom: $margin-h1;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      label {
+        font-size: $font-small;
+      }
+
+      input,
+      textarea {
+        transition: border-color 0.3s, box-shadow 0.3s;
+
+        &:focus {
+          outline: none;
+          border-color: $color-header;
+          box-shadow: 0 0 5px rgba(255, 160, 122, 0.5);
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      button {
+        padding: 12px;
+        font-size: $font-small;
+        background-color: $color-header;
+        color: white;
+        border: none;
+        border-radius: $border-radius-small;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: $color-header-hover;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .contacto__section--grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .contacto__section--texto {
+      width: 100%;
+    }
+
+    .contacto__section--iconos,
+    .contacto__section--mapa,
+    .contacto__section--formulario {
+      width: 48%;
+    }
+
+    .contacto__section--formulario {
+      margin-top: 20px;
+    }
+
+    .contacto__section--mapa iframe {
+      height: 300px;
+    }
+  }
 }

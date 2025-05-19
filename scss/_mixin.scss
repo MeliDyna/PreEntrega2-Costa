@@ -1,96 +1,76 @@
-// Sombra estándar
-@mixin box-shadow-default {
-  box-shadow: $box-shadow;
-}
 
-// Bordes redondeados
-@mixin border-radius($radius: $border-radius) {
-  border-radius: $radius;
-}
-
-// Estilo de botón
-@mixin boton($bg: $color-header, $hover: $color-header-hover, $text-color: $color-texto) {
-  background-color: $bg;
-  color: $text-color;
-  border: none;
-  padding: 10px 20px;
-  @include border-radius($border-radius-small);
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: $hover;
+@mixin flex-column($gap: 0) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
   }
-}
-
-// Fuente general
-@mixin fuente-principal {
-  font-family: $font-principal;
-  font-weight: 400;
-  font-style: normal;
-}
-
-// Fuente para títulos
-@mixin fuente-titulo {
-  font-family: $font-titulos;
-  font-weight: 400;
-  color: $color-titulo;
-}
-
-// Estilos para imágenes con padding
-@mixin imagen-p($width, $height: auto, $padding: $padding-img) {
-  width: $width;
-  height: $height;
-  padding: $padding;
-}
-
-// Contenedor flexible
-@mixin contenedor-flex($gap: 20px, $justify: space-around, $wrap: wrap, $align: flex-start) {
-  display: flex;
-  flex-wrap: $wrap;
-  gap: $gap;
-  justify-content: $justify;
-  align-items: $align;
-}
-@mixin contenedor-grid(
-  $gap: 20px,
-  $columns: repeat(auto-fit, minmax(200px, 1fr)),
-  $justify: stretch,
-  $align: start
-) {
-  display: grid;
-  grid-template-columns: $columns;
-  gap: $gap;
-  justify-content: $justify;
-  align-items: $align;
-}
-
-
-// Estilo de preguntas
-@mixin burbuja-pregunta($bg-color, $text-align: left, $radius-dir: left) {
-  background-color: $bg-color;
-  color: $color-pregunta-text;
-  text-align: $text-align;
-  @if $radius-dir == left {
-    border-top-left-radius: 0;
-  } @else if $radius-dir == right {
-    border-top-right-radius: 0;
+  
+  
+  @mixin responsive-grid($columns) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: 20px;
   }
-  position: relative;
-}
-
-// Flechita para preguntas
-@mixin flecha-pregunta($side, $color) {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  @if $side == left {
-    left: 20px;
-  } @else if $side == right {
-    right: 20px;
+  
+ 
+  @mixin imagen-estilo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: $border-radius-small;
+    box-shadow: $box-shadow;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.02);
+    }
   }
-  border: 10px solid transparent;
-  border-top-color: $color;
-  border-bottom: 0;
-}
+  
+  
+  @mixin titulo-principal {
+    font-family: $font-titulos;
+    font-size: $font-h1;
+    color: $color-titulo;
+    margin-bottom: $margin-h1;
+    text-align: center;
+  }
+  
+  @mixin titulo-secundario {
+    font-family: $font-titulos;
+    font-size: $font-h2;
+    color: $color-titulo;
+    margin-bottom: $margin-h1;
+    text-align: center;
+  }
+  
+  
+  @mixin parrafo-justificado {
+    font-size: $font-p;
+    text-align: justify;
+    margin-bottom: $margin-p;
+    line-height: 1.7;
+  }
+  
+  
+  @mixin contenedor-sombra($bg: $color-form-bg) {
+    background-color: $bg;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: $padding-general;
+    margin: 0 auto;
+  }
+  
+
+  @mixin item-check {
+    font-size: $font-small;
+    padding: 10px;
+    border-left: 4px solid $color-verde-check;
+    background-color: lighten($color-verde-check, 45%);
+    border-radius: $border-radius-small;
+  
+    &::before {
+      content: "✔";
+      color: $color-verde-check;
+      margin-right: 10px;
+    }
+  }

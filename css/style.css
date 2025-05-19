@@ -10,420 +10,10 @@
   font-size: 1.1rem;
 }
 
-body {
-  font-family: "Kite One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: rgb(228, 231, 213);
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  font-family: "Artifika", serif;
-  font-weight: 400;
-  color: cadetblue;
-  font-size: 50px;
-  margin: 30px;
-}
-
-p {
-  font-size: 20px;
-  text-align: left;
-  margin: 30px;
-  font-family: "Kite One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.navegador {
-  background-color: lightsalmon;
-  font-family: "Kite One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding: 10px 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.navegador ul {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  align-self: stretch;
-  align-items: center;
-}
-
-.navegador li {
-  margin: 15px;
-  list-style: none;
-}
-
-.navegador a {
-  color: black;
-  text-decoration: none;
-  margin: 5px;
-}
-
-main {
-  background-color: rgb(228, 231, 213);
-  padding: 20px;
-}
-
-.contenedor {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 1fr;
-}
-.contenedor .texto {
-  padding: 20px;
-  color: black;
-}
-.contenedor .imagenPerfil img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-@media (max-width: 767px) {
-  .contenedor {
-    grid-template-columns: 1fr;
-  }
-  .contenedor .contenedor {
-    width: 1vw;
-    text-align: center;
-  }
-  .contenedor .texto {
-    align-items: center;
-    background-image: url("../images/perfil.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-    min-height: 100vh;
-  }
-  .contenedor .imagenPerfil {
-    display: none !important;
-  }
-}
-
-.servicios {
-  text-align: center;
-  margin: 40px auto;
-}
-.servicios h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  font-family: "Artifika", serif;
-  font-weight: 400;
-  color: cadetblue;
-}
-.servicios ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  max-width: 600px;
-  margin: 0 auto;
-}
-.servicios li {
-  margin: 10px 0;
-  position: relative;
-  padding-left: 25px;
-}
-.servicios li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: green;
-}
-
-.contenedor-contacto {
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  margin: 40px auto;
-  max-width: 1200px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contenido_contacto {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.info-contacto {
-  flex: 1;
-  min-width: 400px;
-  max-width: 600px;
-  padding: 20px;
-}
-.info-contacto h1 {
-  font-family: "Artifika", serif;
-  font-weight: 400;
-  color: cadetblue;
-  font-size: 50px;
-  margin-bottom: 20px;
-}
-.info-contacto p {
-  font-size: 20px;
-  text-align: left;
-  margin: 0 0 20px 0;
-  font-family: "Kite One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.iconos a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: black;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-.iconos i {
-  font-size: 20px;
-  color: black;
-}
-
-.mapa img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.formulario-contacto {
-  flex: 1;
-}
-.formulario-contacto h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-.formulario-contacto form {
-  display: flex;
-  flex-direction: column;
-}
-.formulario-contacto label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-.formulario-contacto input,
-.formulario-contacto textarea {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: "Kite One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-}
-.formulario-contacto textarea {
-  height: 150px;
-  resize: vertical;
-}
-.formulario-contacto button {
-  align-self: flex-start;
-  background-color: lightsalmon;
-  color: black;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-.formulario-contacto button:hover {
-  background-color: coral;
-}
-
-iframe {
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
-}
-
-main {
-  background-color: rgb(228, 231, 213);
-  padding: 20px;
-}
-
 #logo {
-  width: 100px;
-  border-radius: 100px;
-}
-
-#perfil {
-  width: 300px;
-  border-radius: 8px;
-  margin: 80px;
-}
-
-.imagen_1,
-.imagen_3 {
-  width: 50%;
-  max-width: 400px;
-}
-
-.imagen_2,
-.imagen_4 {
-  width: 50%;
-  max-width: 300px;
-}
-
-._imagen_3 {
-  width: 50%;
-  max-width: 250px;
-}
-
-.imagen_5 {
-  width: 300px;
-  height: 200px;
-  padding: 50px;
-}
-
-.imagen_6 {
-  width: 300px;
-  height: 200px;
-  padding: 50px;
-  padding-bottom: 0;
-}
-
-.imagen_7 {
-  width: 300px;
-  height: 200px;
-  padding: 50px;
-}
-
-.contenedor-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
-.texto {
-  flex: 1;
-  min-width: 300px;
-  max-width: 600px;
-  text-align: left;
-}
-
-.imagenes {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.Preguntas-Frecuentes {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0;
-  justify-content: center;
-  align-items: stretch;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#titulo {
-  text-align: center;
-}
-
-.Preguntas-Frecuentes i {
-  font-size: 50px;
-  margin-top: 50px;
-}
-.Preguntas-Frecuentes i.right {
-  align-self: flex-end;
-}
-.Preguntas-Frecuentes i:not(.right) {
-  align-self: flex-start;
-}
-
-.pregunta {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
-  padding: 15px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-.pregunta p {
-  margin: 0;
-  font-size: 20px;
-  line-height: 1.5;
-  color: #333;
-  text-align: left;
-}
-.pregunta strong {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-.pregunta.derecha {
-  background-color: #b2bdb2;
-  color: #333;
-  text-align: right;
-  border-top-right-radius: 0;
-  position: relative;
-}
-.pregunta.derecha p {
-  color: rgb(10, 10, 10);
-  text-align: right;
-}
-.pregunta.derecha::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  right: 20px;
-  border: 10px solid transparent;
-  border-top-color: #c8cfc8;
-  border-bottom: 0;
-}
-.pregunta.izquierda {
-  background-color: #cdd2d6;
-  color: #333;
-  text-align: left;
-  border-top-left-radius: 0;
-  position: relative;
-}
-.pregunta.izquierda p {
-  color: rgb(8, 8, 8);
-  text-align: left;
-}
-.pregunta.izquierda::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 20px;
-  border: 10px solid transparent;
-  border-top-color: #c8d6e2;
-  border-bottom: 0;
-}
-
-.super {
-  text-align: center;
-}
-
-.promos {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0;
-  justify-content: space-around;
-  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
 }
 
 .footer {
@@ -446,6 +36,610 @@ main {
   background-color: rgba(255, 127, 80, 0.1);
   text-decoration: none;
   outline: none;
+}
+
+.index__section--grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  background-color: rgb(228, 231, 213);
+  font-family: "Kite One", sans-serif;
+  color: black;
+}
+.index__section--grid .index__section--texto h1 {
+  font-family: "Artifika", serif;
+  font-size: 50px;
+  color: cadetblue;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.index__section--grid .index__section--texto p {
+  font-size: 20px;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+.index__section--grid .index__section--imagen {
+  display: flex;
+  justify-content: center;
+}
+.index__section--grid .index__section--imagen .perfil {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .index__section--grid {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .index__section--grid .index__section--texto {
+    width: 60%;
+  }
+  .index__section--grid .index__section--texto h1 {
+    text-align: left;
+  }
+  .index__section--grid .index__section--imagen {
+    width: 40%;
+    justify-content: flex-end;
+  }
+}
+.podologia__section--grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  background-color: rgb(228, 231, 213);
+  font-family: "Kite One", sans-serif;
+  color: black;
+}
+.podologia__section--grid .podologia__section--texto {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.podologia__section--grid .podologia__section--texto h1 {
+  font-family: "Artifika", serif;
+  font-size: 50px;
+  color: cadetblue;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.podologia__section--grid .podologia__section--texto p {
+  font-size: 20px;
+  text-align: justify;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+.podologia__section--grid .podologia__section--imagenes,
+.podologia__section--grid .podologia__section--imagenesServicios {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+.podologia__section--grid .podologia__section--imagenes img,
+.podologia__section--grid .podologia__section--imagenesServicios img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.podologia__section--grid .podologia__section--imagenes img:hover,
+.podologia__section--grid .podologia__section--imagenesServicios img:hover {
+  transform: scale(1.02);
+}
+.podologia__section--grid .podologia__section--servicios {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.podologia__section--grid .podologia__section--servicios h2 {
+  font-family: "Artifika", serif;
+  font-size: 30px;
+  color: cadetblue;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.podologia__section--grid .podologia__section--servicios ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.podologia__section--grid .podologia__section--servicios ul li {
+  font-size: 16px;
+  padding: 10px;
+  border-left: 4px solid green;
+  background-color: rgb(102.5, 255, 102.5);
+  border-radius: 6px;
+}
+.podologia__section--grid .podologia__section--servicios ul li::before {
+  content: "✔";
+  color: green;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .podologia__section--grid .podologia__section--imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .podologia__section--grid .podologia__section--imagenesServicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .podologia__section--grid .podologia__section--texto p {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+  }
+}
+@media (min-width: 1024px) {
+  .podologia__section--grid .podologia__section--imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .podologia__section--grid .podologia__section--imagenesServicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .podologia__section--grid .podologia__section--texto,
+  .podologia__section--grid .podologia__section--servicios {
+    max-width: 1100px;
+  }
+}
+.reflexologia__section--grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  background-color: rgb(228, 231, 213);
+  font-family: "Kite One", sans-serif;
+  color: black;
+}
+.reflexologia__section--grid .reflexologia__section--texto {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.reflexologia__section--grid .reflexologia__section--texto h1 {
+  font-family: "Artifika", serif;
+  font-size: 50px;
+  color: cadetblue;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.reflexologia__section--grid .reflexologia__section--texto p {
+  font-size: 20px;
+  text-align: justify;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+.reflexologia__section--grid .reflexologia__section--imagenes,
+.reflexologia__section--grid .reflexologia__section--imagenesServicios {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+.reflexologia__section--grid .reflexologia__section--imagenes img,
+.reflexologia__section--grid .reflexologia__section--imagenesServicios img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.reflexologia__section--grid .reflexologia__section--imagenes img:hover,
+.reflexologia__section--grid .reflexologia__section--imagenesServicios img:hover {
+  transform: scale(1.02);
+}
+.reflexologia__section--grid .reflexologia__section--servicios {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.reflexologia__section--grid .reflexologia__section--servicios h2 {
+  font-family: "Artifika", serif;
+  font-size: 30px;
+  color: cadetblue;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.reflexologia__section--grid .reflexologia__section--servicios ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.reflexologia__section--grid .reflexologia__section--servicios ul li {
+  font-size: 16px;
+  padding: 10px;
+  border-left: 4px solid green;
+  background-color: rgb(102.5, 255, 102.5);
+  border-radius: 6px;
+}
+.reflexologia__section--grid .reflexologia__section--servicios ul li::before {
+  content: "✔";
+  color: green;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .reflexologia__section--grid .reflexologia__section--imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .reflexologia__section--grid .reflexologia__section--imagenesServicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .reflexologia__section--grid .reflexologia__section--texto p {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+  }
+}
+@media (min-width: 1024px) {
+  .reflexologia__section--grid .reflexologia__section--imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .reflexologia__section--grid .reflexologia__section--imagenesServicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .reflexologia__section--grid .reflexologia__section--texto,
+  .reflexologia__section--grid .reflexologia__section--servicios {
+    max-width: 1100px;
+  }
+}
+.promos__main h1 {
+  font-family: "Artifika", serif;
+  font-size: 50px;
+  text-align: center;
+  color: cadetblue;
+  margin-bottom: 30px;
+  animation: fadeInDown;
+  animation-duration: 1s;
+}
+
+.promos__section--grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  background-color: rgb(228, 231, 213);
+  font-family: "Kite One", sans-serif;
+  color: black;
+}
+.promos__section--grid .promos__servicio--imagen,
+.promos__section--grid > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.promos__section--grid .promos__servicio--imagen img,
+.promos__section--grid > div:last-child img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  animation: zoomIn;
+  animation-duration: 1s;
+}
+.promos__section--grid .promos__servicio--texto,
+.promos__section--grid .promos__sesion--texto {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  animation: fadeInUp;
+  animation-duration: 1s;
+}
+.promos__section--grid .promos__servicio--texto p,
+.promos__section--grid .promos__sesion--texto p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
+}
+.promos__section--grid .promos__servicio--texto p::before,
+.promos__section--grid .promos__sesion--texto p::before {
+  content: "✔";
+  color: green;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.promos__section--grid .promos__servicio--texto i,
+.promos__section--grid .promos__sesion--texto i {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .promos__section--grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .promos__section--grid .promos__servicio--imagen,
+  .promos__section--grid > div:last-child {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+  .promos__section--grid .promos__servicio--texto,
+  .promos__section--grid .promos__sesion--texto {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+.Preguntas-Frecuentes {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px;
+  text-align: center;
+}
+.Preguntas-Frecuentes i {
+  font-size: 50px;
+  margin-top: 20px;
+}
+.Preguntas-Frecuentes i.right {
+  align-self: flex-end;
+}
+.Preguntas-Frecuentes .pregunta {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  color: #333;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.Preguntas-Frecuentes .pregunta p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+.Preguntas-Frecuentes .pregunta strong {
+  display: block;
+  margin-bottom: 10px;
+}
+.Preguntas-Frecuentes .pregunta.derecha {
+  align-self: flex-end;
+  background-color: #b2bdb2;
+  border-top-right-radius: 0;
+}
+.Preguntas-Frecuentes .pregunta.derecha::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  border: 10px solid transparent;
+  border-top-color: #c8cfc8;
+  border-bottom: 0;
+}
+.Preguntas-Frecuentes .pregunta.izquierda {
+  align-self: flex-start;
+  background-color: #cdd2d6;
+  border-top-left-radius: 0;
+}
+.Preguntas-Frecuentes .pregunta.izquierda::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  border: 10px solid transparent;
+  border-top-color: #c8d6e2;
+  border-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .Preguntas-Frecuentes {
+    padding: 40px;
+  }
+}
+.pregunta[data-aos] {
+  transition: all 0.3s ease-in-out;
+}
+
+.contacto__section--grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  background-color: rgb(228, 231, 213);
+  font-family: "Kite One", sans-serif;
+  color: black;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.contacto__section--grid .contacto__section--texto h1 {
+  font-family: "Artifika", serif;
+  font-size: 50px;
+  color: cadetblue;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.contacto__section--grid .contacto__section--texto p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+.contacto__section--grid .contacto__section--iconos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.contacto__section--grid .contacto__section--iconos a.facebook {
+  background-color: #3b5998;
+  color: white;
+}
+.contacto__section--grid .contacto__section--iconos a.facebook:hover {
+  background-color: rgb(44.7393364929, 67.4881516588, 115.2606635071);
+}
+.contacto__section--grid .contacto__section--iconos a.twitter {
+  background-color: #1da1f2;
+  color: white;
+}
+.contacto__section--grid .contacto__section--iconos a.twitter:hover {
+  background-color: rgb(11.9665271967, 133.4728033473, 208.0334728033);
+}
+.contacto__section--grid .contacto__section--iconos a.instagram {
+  background-color: #e4405f;
+  color: white;
+}
+.contacto__section--grid .contacto__section--iconos a.instagram:hover {
+  background-color: rgb(211.1513761468, 29.8486238532, 64.119266055);
+}
+.contacto__section--grid .contacto__section--iconos a.linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+.contacto__section--grid .contacto__section--iconos a.linkedin:hover {
+  background-color: rgb(0, 85.4696132597, 130);
+}
+.contacto__section--grid .contacto__section--iconos a.email {
+  background-color: lightsalmon;
+  color: white;
+}
+.contacto__section--grid .contacto__section--iconos a.email:hover {
+  background-color: rgb(255, 123.5714285714, 71);
+}
+.contacto__section--grid .contacto__section--iconos a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+.contacto__section--grid .contacto__section--iconos a i {
+  font-size: 24px;
+}
+.contacto__section--grid .contacto__section--mapa iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.contacto__section--grid .contacto__section--mapa a {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  color: black;
+  font-size: 16px;
+}
+.contacto__section--grid .contacto__section--mapa a:hover {
+  color: coral;
+}
+.contacto__section--grid .contacto__section--mapa a i {
+  font-size: 24px;
+  margin-right: 5px;
+}
+.contacto__section--grid .contacto__section--formulario {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.contacto__section--grid .contacto__section--formulario h2 {
+  font-size: 30px;
+  font-family: "Artifika", serif;
+  color: cadetblue;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.contacto__section--grid .contacto__section--formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contacto__section--grid .contacto__section--formulario form label {
+  font-size: 16px;
+}
+.contacto__section--grid .contacto__section--formulario form input,
+.contacto__section--grid .contacto__section--formulario form textarea {
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.contacto__section--grid .contacto__section--formulario form input:focus,
+.contacto__section--grid .contacto__section--formulario form textarea:focus {
+  outline: none;
+  border-color: lightsalmon;
+  box-shadow: 0 0 5px rgba(255, 160, 122, 0.5);
+}
+.contacto__section--grid .contacto__section--formulario form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.contacto__section--grid .contacto__section--formulario form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: lightsalmon;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.contacto__section--grid .contacto__section--formulario form button:hover {
+  background-color: coral;
+}
+
+@media (min-width: 768px) {
+  .contacto__section--grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .contacto__section--grid .contacto__section--texto {
+    width: 100%;
+  }
+  .contacto__section--grid .contacto__section--iconos,
+  .contacto__section--grid .contacto__section--mapa,
+  .contacto__section--grid .contacto__section--formulario {
+    width: 48%;
+  }
+  .contacto__section--grid .contacto__section--formulario {
+    margin-top: 20px;
+  }
+  .contacto__section--grid .contacto__section--mapa iframe {
+    height: 300px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

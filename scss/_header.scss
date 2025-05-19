@@ -1,5 +1,5 @@
 @import 'variables';
-@import 'mixin';
+
 
 
 .custom-navbar{
@@ -13,4 +13,9 @@
     font-weight: 600;
     font-size: 1.1rem;
   
+}
+#logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 25px;
 }
