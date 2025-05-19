@@ -1,8 +1,11 @@
+@use 'variables';
+@use 'mixin';
+@use 'header';
 @use'body';
 @use 'navegador';
 @use 'contenidoPrincipal';
 @use 'contacto';
 @use 'imagenes';
-@use 'preguntasFrecuente';
+@use 'preguntasFrecuentes';
 @use 'promos';
 @use 'footer';

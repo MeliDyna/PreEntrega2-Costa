@@ -1,128 +1,109 @@
+@import 'variables';
+@import 'mixin';
 
 .contenedor-contacto {
-    padding: 40px;
-    background-color: white;
-    border-radius: 10px;
-    margin: 40px auto;
-    max-width: 1200px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contenido_contacto {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  
-  
-  
+  padding: $padding-general;
+  background-color: $color-form-bg;
+  @include border-radius();
+  margin: $margin-contenedor;
+  max-width: 1200px;
+  @include box-shadow-default;
+}
 
-  .info-contacto {
-    flex: 1;
-    min-width: 400px;
-    max-width: 600px;
-    padding: 20px;
-  }
-  
-  .info-contacto h1 {
-    font-family: "Artifika", serif;
-    font-weight: 400;
-    font-size: 50px;
-    color: cadetblue;
+.contenido_contacto {
+  @include contenedor-flex($justify: space-between, $align: flex-start);
+}
+
+.info-contacto {
+  flex: 1;
+  min-width: 400px;
+  max-width: 600px;
+  padding: $padding-general;
+
+  h1 {
+    @include fuente-titulo;
+    font-size: $font-h1;
     margin-bottom: 20px;
   }
-  
-  .info-contacto p {
-    font-size: 20px;
+
+  p {
+    font-size: $font-p;
     text-align: left;
     margin: 0 0 20px 0;
-    font-weight: 400;
-    font-style: normal;
+    @include fuente-principal;
   }
-  
+}
 
-  .iconos a {
+.iconos {
+  a {
     display: flex;
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: black;
+    color: $color-texto;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: $font-small;
   }
-  
-  .iconos i {
-    font-size: 20px;
-    color: black;
-  }
-  
 
-  .mapa img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  
-
-  .formulario-contacto {
-    flex: 1;
-  }
-  
-  .formulario-contacto h2 {
+  i {
     font-size: 20px;
+    color: $color-texto;
+  }
+}
+
+.mapa img {
+  width: 100%;
+  max-width: $width-img-5-6-7;
+  @include border-radius();
+  margin-top: $margin-img-top;
+}
+
+.formulario-contacto {
+  flex: 1;
+
+  h2 {
+    font-size: $font-p;
     margin-bottom: 20px;
   }
-  
-  .formulario-contacto form {
+
+  form {
     display: flex;
     flex-direction: column;
   }
-  
-  iframe {
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-  }
-  
-  .formulario-contacto label {
+
+  label {
     margin-bottom: 5px;
     font-weight: bold;
   }
-  
-  .formulario-contacto input,
-  .formulario-contacto textarea {
+
+  input,
+  textarea {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 6px;
-    font-family: "Kite One", sans-serif;
+    @include border-radius($border-radius-small);
+    @include fuente-principal;
     font-size: 14px;
   }
-  
-  .formulario-contacto textarea {
+
+  textarea {
     height: 150px;
     resize: vertical;
   }
-  
-  .formulario-contacto button {
+
+  button {
     align-self: flex-start;
-    background-color: lightsalmon;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+    @include boton();
   }
-  
-  .formulario-contacto button:hover {
-    background-color: coral;
-  }
-  
-  main {
-    background-color: rgb(228, 231, 213);
-    padding: 20px;
-  }
+}
+
+iframe {
+  @include border-radius();
+  @include box-shadow-default;
+  max-width: 100%;
+}
+
+main {
+  background-color: $color-fondo;
+  padding: $padding-general;
+}

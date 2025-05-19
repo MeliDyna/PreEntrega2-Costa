@@ -1,52 +1,95 @@
-
+@import 'variables';
+@import 'mixin';
 
 main {
-    background-color: rgb(228, 231, 213);
+  background-color: $color-fondo;
+  padding: $padding-general;
+}
+
+.contenedor {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+
+  .texto {
     padding: 20px;
+    color: black;
   }
-  
-  .contenedor {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px;
-    justify-content: space-around;
-    flex-wrap: wrap;
+
+  .imagenPerfil {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   }
-  
-  .contenedor .texto {
-    flex: 1;
-    min-width: 300px;
+
+  // Modo mobile
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+
+    .contenedor{
+      width: 1vw;
+      text-align: center;
+
+
+    }
+
+
+
+    .texto {
+      align-items: center;
+
+      background-image: url("../images/perfil.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+      min-height: 100vh; // Asegura que el fondo se vea bien
+    }
+
+    
+    .imagenPerfil {
+      display: none !important;
+    }
   }
-  
-  
-  .servicios {
-    text-align: center;
-    margin: 40px auto;
-  }
-  
-  .servicios h2 {
-    font-size: 30px;
+}
+
+
+
+
+
+
+
+.servicios {
+  text-align: center;
+  margin: $margin-contenedor;
+
+  h2 {
+    font-size: $font-h2;
     margin-bottom: 20px;
+    @include fuente-titulo;
   }
-  
-  .servicios ul {
+
+  ul {
     list-style: none;
     padding: 0;
     text-align: left;
     max-width: 600px;
     margin: 0 auto;
   }
-  
-  .servicios li {
+
+  li {
     margin: 10px 0;
     position: relative;
     padding-left: 25px;
+
+    &::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: $color-verde-check;
+    }
   }
-  
-  .servicios li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: green;
-  }
+}

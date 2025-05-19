@@ -1,9 +1,10 @@
+@import 'variables';
+@import 'mixin';
+
 .super {
-    text-align: center;
-  }
-  
-  .promos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+  text-align: center;
+}
+
+.promos {
+  @include contenedor-flex($gap: 0, $justify: space-around, $wrap: nowrap, $align: center);
+}

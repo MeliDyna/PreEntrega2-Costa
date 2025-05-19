@@ -1,24 +1,23 @@
-body {
-    font-family: "Kite One", sans-serif;
-    background-color: rgb(228, 231, 213);
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
-    font-family: "Artifika", serif;
-    font-weight: 400;
-    font-size: 50px;
-    color: cadetblue;
-    margin-bottom: 30px;
-    margin: 30px;
-  }
-  
-  p {
-    font-size: 20px;
-    text-align: left;
-    margin: 30px;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+@import 'variables';
+@import 'mixin';
+
+.body {
+  @include fuente-principal;
+  background-color: $color-fondo;
+  margin: 0;
+  padding: 0;
+  width:1vw ;
+}
+
+h1 {
+  @include fuente-titulo;
+  font-size: $font-h1;
+  margin: $margin-h1;
+}
+
+p {
+  font-size: $font-p;
+  text-align: left;
+  margin: $margin-p;
+  @include fuente-principal;
+}

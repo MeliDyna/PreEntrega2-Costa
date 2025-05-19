@@ -1,82 +1,66 @@
-
+@import 'variables';
+@import 'mixin';
 
 #logo {
-    width: 100px;
-    border-radius: 100px;
-  }
-  
-  #perfil {
-    width: 300px;
-    border-radius: 8px;
-    margin: 80px;
-  }
-  
-  .imagen_1 {
-    width: 50%;
-    max-width: 400px;
-  }
-  
-  .imagen_2 {
-    width: 50%;
-    max-width: 300px;
-  }
-  
-  .imagen_3 {
-    width: 50%;
-    max-width: 400px;
-  }
-  
-  ._imagen_3 {
-    width: 50%;
-    max-width: 250px;
-  }
-  
-  .imagen_4 {
-    width: 50%;
-    max-width: 300px;
-  }
-  
-  .imagen_5 {
-    width: 300px;
-    height: 200px;
-    padding: 50px;
-  }
-  
-  .imagen_6 {
-    width: 300px;
-    height: 200px;
-    padding: 50px;
-    padding-bottom: 0px;
-  }
-  
-  .imagen_7 {
-    width: 300px;
-    height: 200px;
-    padding: 50px;
-  
-  }
-  
-  .contenedor-flex {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-  
-  }
-  
-  .texto {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
-    text-align: left;
-  }
-  
-  .imagenes {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    align-items: flex-start;
-  }
+  width: $width-logo;
+  @include border-radius(100px);
+}
+
+#perfil {
+  width: $width-perfil;
+  @include border-radius(8px);
+  margin: 80px;
+}
+
+// Imágenes 1 a 4: uso directo de propiedades
+.imagen_1,
+.imagen_3 {
+  width: 50%;
+  max-width: 400px;
+}
+
+.imagen_2,
+.imagen_4 {
+  width: 50%;
+  max-width: 300px;
+}
+
+._imagen_3 {
+  width: 50%;
+  max-width: 250px;
+}
+
+// Imágenes 5, 6 y 7 con mixin
+.imagen_5 {
+  @include imagen-p($width-img-5-6-7, $height-img-5-6-7);
+}
+
+.imagen_6 {
+  @include imagen-p($width-img-5-6-7, $height-img-5-6-7);
+  padding-bottom: 0;
+}
+
+.imagen_7 {
+  @include imagen-p($width-img-5-6-7, $height-img-5-6-7);
+}
+
+// Contenedor flexible con mixin
+.contenedor-flex {
+  @include contenedor-flex(40px);
+}
+
+.texto {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.imagenes {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+}

@@ -1,0 +1,96 @@
+// Sombra estándar
+@mixin box-shadow-default {
+  box-shadow: $box-shadow;
+}
+
+// Bordes redondeados
+@mixin border-radius($radius: $border-radius) {
+  border-radius: $radius;
+}
+
+// Estilo de botón
+@mixin boton($bg: $color-header, $hover: $color-header-hover, $text-color: $color-texto) {
+  background-color: $bg;
+  color: $text-color;
+  border: none;
+  padding: 10px 20px;
+  @include border-radius($border-radius-small);
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover;
+  }
+}
+
+// Fuente general
+@mixin fuente-principal {
+  font-family: $font-principal;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Fuente para títulos
+@mixin fuente-titulo {
+  font-family: $font-titulos;
+  font-weight: 400;
+  color: $color-titulo;
+}
+
+// Estilos para imágenes con padding
+@mixin imagen-p($width, $height: auto, $padding: $padding-img) {
+  width: $width;
+  height: $height;
+  padding: $padding;
+}
+
+// Contenedor flexible
+@mixin contenedor-flex($gap: 20px, $justify: space-around, $wrap: wrap, $align: flex-start) {
+  display: flex;
+  flex-wrap: $wrap;
+  gap: $gap;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin contenedor-grid(
+  $gap: 20px,
+  $columns: repeat(auto-fit, minmax(200px, 1fr)),
+  $justify: stretch,
+  $align: start
+) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
+// Estilo de preguntas
+@mixin burbuja-pregunta($bg-color, $text-align: left, $radius-dir: left) {
+  background-color: $bg-color;
+  color: $color-pregunta-text;
+  text-align: $text-align;
+  @if $radius-dir == left {
+    border-top-left-radius: 0;
+  } @else if $radius-dir == right {
+    border-top-right-radius: 0;
+  }
+  position: relative;
+}
+
+// Flechita para preguntas
+@mixin flecha-pregunta($side, $color) {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  @if $side == left {
+    left: 20px;
+  } @else if $side == right {
+    right: 20px;
+  }
+  border: 10px solid transparent;
+  border-top-color: $color;
+  border-bottom: 0;
+}

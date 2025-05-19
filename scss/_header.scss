@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'mixin';
+
+
+.custom-navbar{
+    background-color:$color-header !important;
+}
+
+
+.nav-link {
+    color: $color-texto !important;
+    font-family: $font-principal;
+    font-weight: 600;
+    font-size: 1.1rem;
+  
+}

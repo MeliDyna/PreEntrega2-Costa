@@ -1,0 +1,74 @@
+@import 'variables';
+@import 'mixin';
+
+.Preguntas-Frecuentes {
+  @include contenedor-flex($gap: 0, $justify: center, $wrap: nowrap, $align: stretch);
+  margin: 0 auto;
+  text-align: center;
+}
+
+#titulo {
+  text-align: center;
+}
+
+.Preguntas-Frecuentes i {
+  font-size: $icon-size;
+  margin-top: 50px;
+  &.right {
+    align-self: flex-end;
+  }
+  &:not(.right) {
+    align-self: flex-start;
+  }
+}
+
+.pregunta {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: $color-form-bg;
+  @include border-radius(15px);
+  @include box-shadow-default;
+  position: relative;
+
+  p {
+    margin: 0;
+    font-size: $font-p;
+    line-height: 1.5;
+    color: $color-pregunta-text;
+    text-align: left;
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  &.derecha {
+    @include burbuja-pregunta($color-pregunta-derecha, right, right);
+    
+    p {
+      color: rgb(10, 10, 10);
+      text-align: right;
+    }
+
+    &::after {
+      @include flecha-pregunta(right, $color-pregunta-derecha-after);
+    }
+  }
+
+  &.izquierda {
+    @include burbuja-pregunta($color-pregunta-izquierda, left, left);
+
+    p {
+      color: rgb(8, 8, 8);
+      text-align: left;
+    }
+
+    &::after {
+      @include flecha-pregunta(left, $color-pregunta-izquierda-after);
+    }
+  }
+}
